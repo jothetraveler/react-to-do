@@ -35,7 +35,8 @@ class App extends Component {
   }
 
   deleteToDo (index){
-    const newToDoList = this.state.todos.filter(index);
+    const todo = this.state.todos[index];
+    const newToDoList = this.state.todos.filter( () => todo );
     this.setState({ todos: newToDoList })
   }
 
